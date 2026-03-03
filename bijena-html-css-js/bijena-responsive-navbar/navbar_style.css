@@ -1,0 +1,57 @@
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f9a2a2;
+    padding: 10px 20px;
+}
+
+.logo{
+    color: #fff;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+ul{
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+ul li{
+    margin-left: 20px;
+}
+
+ul li a{
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+}
+ /* style toggle menu */
+#toggle{
+    display: none;
+}  
+
+/* show toggle on small screen */
+@media (max-width: 768px){
+    ul{
+        display: none;
+        flex-direction: column;
+        width: 100%;
+    }
+    ul.active{
+        display: flex;
+    }
+    #toggle{
+        display: block;
+        cursor: pointer;
+        color: #fff;
+        font-size: 24px;
+    }
+}
+
+.active{
+    display: block;
+}
+
