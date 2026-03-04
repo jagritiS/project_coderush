@@ -1,0 +1,32 @@
+body{
+  text-align:center;
+  margin-top:50px;
+}
+
+input{
+  padding:8px;
+  width:200px;
+}
+
+button{
+  padding:8px 12px;
+  cursor:pointer;
+}
+
+ul{
+  list-style:none;
+  padding:0;
+  margin-top:20px;
+}
+
+li{
+  background:#f3f4f6;
+  margin:5px auto;
+  padding:8px;
+  width:220px;
+  cursor:pointer;
+}
+
+li:hover{
+  background:#e5e7eb;
+}
