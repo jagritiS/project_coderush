@@ -4,17 +4,32 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Anuska Bhandari - Profile</title>
-
+<link rel="stylesheet" href="../anuska-responsive-navbar/navbar-style.css">
+<link rel="stylesheet" href="hero-style.css">
+   <nav>
+        <div class ="logo">CodeRush</div>
+        <ul id ="menu">
+            <li>Home</li> 
+            <li>About</li>
+            <li>Contact</li>
+        </ul>
+        <div id ="toggle">☰</div>
+    </nav>
 <style>
 body {
     margin: 0;
     font-family: 'Segoe UI', sans-serif;
     background: linear-gradient(135deg, #667eea, #764ba2);
+}
+
+
+.container {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
 }
+
 
 .card {
     background: #ffffff;
@@ -71,23 +86,43 @@ button {
 button:hover {
     background-color: #5a3a85;
 }
+
+/* Optional smooth scroll */
+html {
+    scroll-behavior: smooth;
+}
 </style>
 </head>
 
 <body>
 
-<div class="card">
-    <img src="/project_coderush/anuska-html-css-js/profile.jpeg" alt="Anuska Bhandari" class="profile-img">
-    
-    <h2>Anuska Bhandari</h2>
-    <p class="role">Computer Engineer</p>
-    
-    <p class="skills">
-        HTML • CSS • JavaScript • PHP • MySQL • Python
-    </p>
-    
-    <button id="followBtn">Connect</button>
+<!-- Card Section -->
+<div class="container">
+    <div class="card">
+        <img src="/project_coderush/anuska-html-css-js/profile.jpeg" 
+             alt="Anuska Bhandari" 
+             class="profile-img">
+        
+        <h2>Anuska Bhandari</h2>
+        <p class="role">Computer Engineer</p>
+        
+        <p class="skills">
+            HTML • CSS • JavaScript • PHP • MySQL • Python
+        </p>
+        
+        <button id="followBtn">Connect</button>
+    </div>
 </div>
+
+<!-- Hero Section -->
+<section class="hero">
+ <h1>Welcome</h1>
+ <button onclick="scrollToSection()">Get Started</button>
+</section>
+
+<section id="target">
+    Target Section
+</section>
 
 <script>
 const btn = document.getElementById("followBtn");
@@ -101,7 +136,16 @@ btn.addEventListener("click", function() {
         btn.style.backgroundColor = "#764ba2";
     }
 });
+
+function scrollToSection() {
+    document.getElementById("target").scrollIntoView({
+        behavior: "smooth"
+    });
+}
 </script>
+
+<script src="hero-script.js"></script>
+<script src="../anuska-responsive-navbar/navbar-script.js"></script>
 
 </body>
 </html>
