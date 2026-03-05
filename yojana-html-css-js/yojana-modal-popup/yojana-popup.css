@@ -1,0 +1,27 @@
+body{
+  font-family: Arial, sans-serif;
+  text-align:center;
+  margin-top:50px;
+}
+
+.modal{
+  display:none;
+  position:fixed;
+  inset:0;
+  background:rgba(0,0,0,0.5);
+}
+
+.content{
+  background:#fff;
+  width:300px;
+  padding:20px;
+  margin:10% auto;
+  position:relative;
+}
+
+#closeBtn{
+  position:absolute;
+  right:10px;
+  top:10px;
+  cursor:pointer;
+}

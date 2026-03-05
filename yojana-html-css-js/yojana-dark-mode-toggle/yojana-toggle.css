@@ -1,0 +1,19 @@
+body{
+  background:#ffffff;
+  color:#000000;
+  font-family: Arial, sans-serif;
+  text-align:center;
+  padding-top:50px;
+  transition:0.3s;
+}
+
+.dark{
+  background:#111111;
+  color:#ffffff;
+}
+
+button{
+  padding:10px 15px;
+  cursor:pointer;
+  margin-top:20px;
+}
