@@ -81,17 +81,14 @@ body {
     border: 1px solid #333;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
     list-style: none;
-    /* Ensure no bullets */
   }
 
   /* When navbar is active, show the links in its place on the right */
   .navbar.active .nav-links {
     display: flex;
     flex-direction: row;
-    /* Horizontal list on the right */
     align-items: center;
     position: static;
-    /* Let it sit naturally in the navbar flexbox */
     width: auto;
   }
 
