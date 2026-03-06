@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+    .container{
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.2);
+    text-align: center;
+}
+
+h2{
+    margin-bottom: 20px;
+}
+input{
+    width: 250px;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+button{
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background: #4facfe;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover{
+    background: #0077ff;
+}    
+</style>
+</head>
+<body>
+
+<div class="container">
+    <form onsubmit="return validate()">
+        <h3>Email Validation</h3>
+    <h2>
+        <input type="text" id="email" placeholder="Enter your email">
+        <button type="submit">Submit</button>
+    </h2>
+    </form>
+</div>
+
+<script src="validation.js"></script>
+
+</body>
+</html>
