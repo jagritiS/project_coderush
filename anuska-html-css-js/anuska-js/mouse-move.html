@@ -1,0 +1,27 @@
+<h1>Move your mouse!</h1>
+<p id="coords"></p>
+<script>
+document.addEventListener("mousemove", function(event) {
+
+ let x = event.clientX;
+ let y = event.clientY;
+
+ document.getElementById("coords").innerText =
+ "Mouse X: " + x + " Mouse Y: " + y;
+
+});
+//change the background of mouse cursor
+const box = document.createElement("div");
+
+box.style.width="20px";
+box.style.height="20px";
+box.style.background="red";
+box.style.position="absolute";
+
+document.body.appendChild(box);
+
+document.addEventListener("mousemove",(e)=>{
+ box.style.left = e.pageX+"px";
+ box.style.top = e.pageY+"px";
+});
+</script>
