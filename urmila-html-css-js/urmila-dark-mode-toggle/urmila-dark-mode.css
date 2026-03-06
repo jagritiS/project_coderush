@@ -1,0 +1,21 @@
+body {
+    background: #ffffff;
+    color: #000000;
+    transition: 0.3s;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    padding-top: 100px;
+}
+
+/* Dark mode class */
+.dark {
+    background: #111111;
+    color: #ffffff;
+}
+
+button {
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+    border-radius: 6px;
+}
