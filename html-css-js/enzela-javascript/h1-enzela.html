@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Interactive Page</title>
+  <style>
+    body {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      font-family: Arial, sans-serif;
+      transition: background 0.5s;
+      text-align: center;
+    }
+    h1 {
+      color: white;
+      text-shadow: 1px 1px 3px #000;
+    }
+    #coords {
+      font-size: 1.2rem;
+      margin-top: 20px;
+      color: white;
+      text-shadow: 1px 1px 2px #000;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Enzela Neupane</h1>
+  <p id="coords">Move your mouse!</p>
+
+  <script>
+    
+    setInterval(() => {
+      document.body.style.background =
+        "#" + Math.floor(Math.random() * 16777215).toString(16);
+    }, 500);
+
+ 
+    console.log("Your browser info:", navigator.userAgent);
+
+  
+    document.addEventListener("mousemove", function(event) {
+      let x = event.clientX;
+      let y = event.clientY;
+
+      document.getElementById("coords").innerText =
+        "Mouse X: " + x + "  Mouse Y: " + y;
+    });
+  </script>
+
+</body>
+</html>
