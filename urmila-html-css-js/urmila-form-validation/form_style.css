@@ -1,0 +1,22 @@
+body {
+    font-family: Arial;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    width: 250px;
+}
+
+input, button {
+    margin: 10px 0;
+    padding: 8px;
+}
+
+#error {
+    color: red;
+}
