@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>JavaScript Magic</title>
+
+<style>
+body{
+    font-family: Arial, sans-serif;
+    font-size: 28px;
+    text-align: center;
+    margin-top: 100px;
+    background: black;
+    color: #4facfe;
+}
+</style>
+
+</head>
+<body>
+
+<div id="text"></div>
+
+<script>
+let text = "Welcome to JavaScript Magic!";
+let i = 0;
+
+function type(){
+
+ if(i < text.length){
+  document.getElementById("text").innerHTML += text.charAt(i);
+  i++;
+  setTimeout(type,100);
+ }
+
+}
+
+type();
+
+setInterval(()=>{
+ document.body.style.marginLeft =
+ Math.random()*20+"px";
+},100);
+</script>
+
+</body>
+</html>
