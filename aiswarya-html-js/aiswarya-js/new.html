@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+
+  <h1>Move your mouse!</h1>
+  <p id="coords"></p>
+
+  <script>
+
+    alert("Welcome to JavaScript Magic!");
+    let price = 100;
+    let quantity = 3;
+
+    console.log(price * quantity);
+    let text = "Aiswarya";
+    let i = 0;
+    let speed = 100;
+
+    function display() {
+      if (i < text.length) {
+        document.body.innerHTML += text.charAt(i);
+        i++;
+        setTimeout(display, speed);
+      }
+    }
+
+    display();
+
+    setInterval(() => {
+      document.body.style.marginLeft = Math.random() + 20 + "px";
+    }, 100)
+    document.addEventListener("mousemove", function (event) {
+
+      let x = event.clientX;
+      let y = event.clientY;
+
+      document.getElementById("coords").innerText =
+        "Mouse X: " + x + " Mouse Y: " + y;
+
+    });
+
+
+    document.body.style.background = "gray";
+
+    document.addEventListener("click", () => {
+      alert("You clicked the page!");
+    });
+
+    const box = document.createElement("div");
+
+    box.style.width = "40px";
+    box.style.height = "40px";
+    box.style.background = "green";
+    box.style.position = "absolute";
+
+    document.body.appendChild(box);
+
+    document.addEventListener("mousemove", (e) => {
+      box.style.left = e.pageX + "px";
+      box.style.top = e.pageY + "px";
+    });
+
+
+  </script>
+</body>
+
+</html>
