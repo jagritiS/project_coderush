@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    nav{display:flex;justify-content:space-between;align-items:center;padding:10px 20px;background:#111;color:#fff}
+ul{display:flex;gap:20px;list-style:none}
+#toggle{display:none;cursor:pointer}
+@media(max-width:768px){
+ ul{display:none;flex-direction:column}
+ ul.show{display:flex}
+ #toggle{display:block}
+}
+
+</head>
+<body>
+    <nav>
+ <div class="logo">CodeRush</div>
+ <ul id="menu">
+   <li>Home</li><li>About</li><li>Contact</li>
+ </ul>
+ <div id="toggle">☰</div>
+</nav>
+
+</body>
+document.getElementById("toggle").onclick=()=>{
+ document.getElementById("menu").classList.toggle("show");
+};
+
+</html>

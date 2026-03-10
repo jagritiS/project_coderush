@@ -1,0 +1,40 @@
+/* Navigation styling */
+nav{
+display;
+background:#333;
+}
+
+nav a{
+color;
+padding:14px 20px;
+text-decoration;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width:768px){
+
+nav{
+flex-direction;
+}
+
+nav a{
+text-align;
+border-bottom:1px solid white;
+}
+
+}
+
+/* Container layout */
+.container{
+display;
+gap:20px;
+padding:20px;
+}
+
+/* Card design */
+.card{
+background:#eee;
+padding:20px;
+flex:1;
+text-align;
+}
