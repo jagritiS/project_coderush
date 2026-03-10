@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Form Validation</title>
+<style>
+    body{
+        font-family: Arial, sans-serif;
+        padding: 20px;
+    }
+
+    form{
+        display: flex;
+        flex-direction: column;
+        width: 300px;
+    }
+
+    input{
+        margin-bottom: 10px;
+        padding: 8px;
+        font-size: 16px;
+    }
+
+    button{
+        padding: 10px;
+        font-size: 16px;
+        background-color: blue;
+        color: white;
+        border: none;
+        cursor: pointer;
+    }
+
+    #error{
+        color: red;
+        margin-top: 10px;
+    }
+</style>
+</head>
+
+<body>
+
+<form id="form">
+<input type="email" id="email" placeholder="Enter your email">
+<input type="password" id="password" placeholder="Enter your password">
+<button type="submit">Submit</button>
+</form>
+
+<p id="error"></p>
+
+<script>
+
+document.getElementById("form").onsubmit = (e)=>{
+
+    e.preventDefault();
+
+    const email = document.getElementById("email").value;
+    const password = document.getElementById("password").value;
+    const error = document.getElementById("error");
+
+    if(
+       !email.includes("gmail") &&
+       !email.includes("hotmail") &&
+       !email.includes("yahoo")
+    ){
+        error.textContent = "Email must be gmail, hotmail, or yahoo.";
+    }
+
+    else if(password.length < 6){
+        error.textContent = "Password must be at least 6 characters.";
+    }
+
+    else{
+        error.textContent = "Form submitted successfully!";
+    }
+
+};
+
+</script>
+</body>
+</html>
